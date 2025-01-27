@@ -1,21 +1,21 @@
-# Credit Prediction API
+# Credit Prediction API.
 
 This project provides an API to predict the creditworthiness of individuals based on demographic and financial features. It is built with Flask and uses a trained XGBoost model for classification.
 
 ---
 
-## Description of the Problem
+## Description of the Problem.
 
 Predicting creditworthiness is a critical task for financial institutions to assess the risk of lending to individuals. Such predictions can be useful for:
 - Loan approval processes.
 - Risk assessment and management.
 - Financial planning and forecasting.
 
-This project uses the **German Credit Dataset** from the UCI Machine Learning Repository to train the model. The dataset includes attributes such as age, employment status, housing, and credit amount.
+This project uses the German Credit Dataset from the UCI Machine Learning Repository to train the model. The dataset includes attributes such as age, employment status, housing, and credit amount.
 
-## How to Run the Project
+## How to Run the Project.
 
-### 1. Prerequisites
+### 1. Prerequisites.
 
 Ensure you have the following installed:
 - Python 3.8+.
@@ -23,7 +23,7 @@ Ensure you have the following installed:
 - Flask.
 - Required libraries listed in `requirements.txt`.
 
-### 2. Clone the Repository
+### 2. Clone the Repository.
 
 Clone the project repository from GitHub:
 
@@ -32,7 +32,7 @@ git clone https://github.com/ibacaraujo/credit_prediction_api.git
 cd credit_prediction_api
 ```
 
-### 3. Install Dependencies
+### 3. Install Dependencies.
 
 Install the necessary Python packages:
 
@@ -40,7 +40,7 @@ Install the necessary Python packages:
 pip install -r requirements.txt
 ```
 
-### 4. Start the Flask Server
+### 4. Start the Flask Server.
 
 Run the Flask application:
 
@@ -48,7 +48,7 @@ Run the Flask application:
 python predict.py
 ```
 
-### 5. Test the API
+### 5. Test the API.
 
 You can test the API using the `predict_test.py` script:
 
@@ -56,7 +56,7 @@ You can test the API using the `predict_test.py` script:
 python predict_test.py
 ```
 
-### 6. Example Response
+### 6. Example Response.
 
 The API will return a JSON response like this:
 
@@ -67,13 +67,13 @@ The API will return a JSON response like this:
 }
 ```
 
-## Testing the Application with Containerization
+## Testing the Application with Containerization.
 
 This section explains how to build, run, and test the application using Docker.
 
 ---
 
-### 1. Build the Docker Image
+### 1. Build the Docker Image.
 
 Navigate to the `credit_prediction_api` folder and build the Docker image using the `Dockerfile`:
 
@@ -82,7 +82,7 @@ cd credit_prediction_api
 docker build -t credit_prediction_api .
 ```
 
-### 2. Run the Docker Container
+### 2. Run the Docker Container.
 
 Start a container from the built image and map it to your local machine’s port:
 
@@ -90,9 +90,9 @@ Start a container from the built image and map it to your local machine’s port
 docker run -d -p 8885:8885 credit_prediction_api
 ```
 
-### 3. Test the API
+### 3. Test the API.
 
-#### Test with the `predict_test.py` Script
+#### Test with the `predict_test.py` Script.
 
 Run the `predict_test.py` script to test the containerized API:
 
@@ -100,13 +100,13 @@ Run the `predict_test.py` script to test the containerized API:
 python predict_test.py
 ```
 
-### 4. Test the Deployed Web Service
+### 4. Test the Deployed Web Service.
 
 You can test the deployed service using the following URL:
 
 [https://credit-prediction-xw26.onrender.com/predict](https://credit-prediction-xw26.onrender.com/predict).
 
-## Conclusion
+## Conclusion.
 
 This project demonstrates a simple and effective way to deploy a machine learning model as a web service using Flask and Docker. The API provides predictions on whether an individual is creditworthy based on demographic and financial data, making it a valuable tool for various applications in the financial sector.
 
